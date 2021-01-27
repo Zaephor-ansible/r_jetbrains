@@ -12,3 +12,5 @@ url:
   goland: "https://download.jetbrains.com/go/goland-{{ version.goland }}.tar.gz"
   pycharm: "https://download.jetbrains.com/python/pycharm-professional-{{ version.pycharm }}.tar.gz"
   webstorm: "https://download.jetbrains.com/webstorm/WebStorm-{{ version.webstorm }}.tar.gz"
+launcher:
+  androidstudio: "studio.sh"

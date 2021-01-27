@@ -36,6 +36,6 @@
 - name: "{{ install }} : Create application symlink"
   become: yes
   file:
-    src: "/opt/{{ install }}/bin/{{ install }}.sh"
+    src: "/opt/{{ install }}/bin/{{ launcher[install] if install in launcher else install + '.sh' }}"
     dest: "/usr/local/sbin/{{ install }}"
     state: link
