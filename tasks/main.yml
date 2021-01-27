@@ -21,7 +21,7 @@
   become: yes
   when: "not jb_stat.stat.exists"
   unarchive:
-    src: "/tmp/{{ install }}.tar"
+    src: "/tmp/{{ install }}.tar.gz"
     dest: "/opt/{{ install }}-{{ version[install] }}"
     extra_opts:
     - "--strip-components=1"
