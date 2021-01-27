@@ -1,2 +1,41 @@
 ---
-# tasks file for r_jetbrains
+- name: "{{ install }} : Check for directory symlink"
+  stat:
+    path: "/opt/{{ install }}-{{ version[install] }}"
+  register: jb_stat
+
+- name: "{{ install }} : Download"
+  when: "not jb_stat.stat.exists"
+  get_url:
+    url: "{{ url[install] }}"
+    dest: "/tmp/{{ install }}.tar.gz"
+
+- name: "{{ install }} : Create directory"
+  become: yes
+  when: "not jb_stat.stat.exists"
+  file:
+    dest: "/opt/{{ install }}-{{ version[install] }}"
+    state: directory
+
+- name: "{{ install }} : Extract package"
+  become: yes
+  when: "not jb_stat.stat.exists"
+  unarchive:
+    src: "/tmp/{{ install }}.tar"
+    dest: "/opt/{{ install }}-{{ version[install] }}"
+    extra_opts:
+    - "--strip-components=1"
+
+- name: "{{ install }} : Create folder symlink"
+  become: yes
+  file:
+    src: "/opt/{{ install }}-{{ version[install] }}"
+    dest: "/opt/{{ install }}"
+    state: link
+
+- name: "{{ install }} : Create application symlink"
+  become: yes
+  file:
+    src: "/opt/{{ install }}/bin/{{ install }}.sh"
+    dest: "/usr/local/sbin/{{ install }}"
+    state: link
