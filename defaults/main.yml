@@ -5,6 +5,7 @@ version:
   clion: "2020.3.1"
   datagrip: "2020.3.1"
   goland: "2020.3.1"
+  phpstorm: "2020.3.1"
   pycharm: "2020.3.2"
   webstorm: "2020.3.2"
 url:
@@ -12,6 +13,7 @@ url:
   clion: "https://download.jetbrains.com/cpp/CLion-{{ version.clion }}.tar.gz"
   datagrip: "https://download.jetbrains.com/datagrip/datagrip-{{ version.datagrip }}.tar.gz"
   goland: "https://download.jetbrains.com/go/goland-{{ version.goland }}.tar.gz"
+  phpstorm: "https://download.jetbrains.com/webide/PhpStorm-{{ version.phpstorm }}.tar.gz"
   pycharm: "https://download.jetbrains.com/python/pycharm-professional-{{ version.pycharm }}.tar.gz"
   webstorm: "https://download.jetbrains.com/webstorm/WebStorm-{{ version.webstorm }}.tar.gz"
 launcher:
@@ -21,5 +23,6 @@ name:
   clion: "CLion"
   datagrip: "DataGrip"
   goland: "GoLand"
+  phpstorm: "PhpStorm"
   pycharm: "PyCharm"
   webstorm: "WebStorm"
