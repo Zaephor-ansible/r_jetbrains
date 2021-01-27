@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name={{ name[install] if install in name else install }}
+Icon=/opt/{{ install }}/bin/{{ launcher[install] if install in launcher else install }}.png
+Exec="/opt/{{ install }}/bin/{{ launcher[install] if install in launcher else install }}.sh" %f
+Comment=Develop with pleasure!
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-{{ install }}

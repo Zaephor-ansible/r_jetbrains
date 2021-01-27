@@ -13,4 +13,10 @@ url:
   pycharm: "https://download.jetbrains.com/python/pycharm-professional-{{ version.pycharm }}.tar.gz"
   webstorm: "https://download.jetbrains.com/webstorm/WebStorm-{{ version.webstorm }}.tar.gz"
 launcher:
-  androidstudio: "studio.sh"
+  androidstudio: "studio"
+name:
+  androidstudio: "Android Studio"
+  clion: "CLion"
+  goland: "GoLand"
+  pycharm: "PyCharm"
+  webstorm: "WebStorm"

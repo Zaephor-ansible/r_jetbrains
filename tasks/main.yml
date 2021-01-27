@@ -36,6 +36,14 @@
 - name: "{{ install }} : Create application symlink"
   become: yes
   file:
-    src: "/opt/{{ install }}/bin/{{ launcher[install] if install in launcher else install + '.sh' }}"
+    src: "/opt/{{ install }}/bin/{{ launcher[install] if install in launcher else install }}.sh"
     dest: "/usr/local/sbin/{{ install }}"
     state: link
+
+- name: "{{ install }} : Add to applications list"
+  become: yes
+  template:
+    src: "cinnamon.desktop.j2"
+    dest: "/usr/share/applications/jetbrains-{{ install }}.desktop"
+    mode: "0644"
+    force: yes
