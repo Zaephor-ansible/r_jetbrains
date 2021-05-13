@@ -2,12 +2,12 @@
 # defaults file for r_jetbrains
 version:
   androidstudio: "2020.3.1.14"
-  clion: "2021.1"
-  datagrip: "2021.1"
-  goland: "2021.1"
-  phpstorm: "2021.1"
-  pycharm: "2021.1"
-  webstorm: "2021.1"
+  clion: "2021.1.1"
+  datagrip: "2021.1.1"
+  goland: "2021.1.1"
+  phpstorm: "2021.1.2"
+  pycharm: "2021.1.1"
+  webstorm: "2021.1.1"
 url:
   androidstudio: "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/{{ version.androidstudio }}/android-studio-{{ version.androidstudio }}-linux.tar.gz"
   clion: "https://download.jetbrains.com/cpp/CLion-{{ version.clion }}.tar.gz"
